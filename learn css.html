@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Learn CSS</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+        body{
+            background: linear-gradient(skyblue, lightgreen, purple);
+        }
+
+        h3{
+          background-color: gold;
+          
+        }
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="learn html.html">Learn HTML</a>
+    <a href="learn css.html">Learn CSS</a>
+    <a href="resources.html">Resources</a>
+  </nav>
+
+  <div class="container">
+    <h1>🎨 Learn CSS</h1>
+    <p>CSS (Cascading Style Sheets) is used to style and lay out web pages — control colors, fonts, spacing, and layouts.</p>
+
+    <!-- Table of Contents -->
+    <h2>🔗 Topics Covered</h2>
+    <ul>
+      <li><a href="#selectors">CSS Selectors</a></li>
+      <li><a href="#colors">Colors & Backgrounds</a></li>
+      <li><a href="#fonts">Fonts & Text</a></li>
+      <li><a href="#box-model">Box Model</a></li>
+      <li><a href="#layout">Layout: Flexbox & Grid</a></li>
+      <li><a href="#project">Mini Project</a></li>
+    </ul>
+
+    <!-- Selectors -->
+    <h2 id="selectors">1. CSS Selectors</h2>
+    <p>Selectors target HTML elements to apply styles:</p>
+    <pre><code>
+ <h3>/* Select all paragraphs */
+p {
+  color: blue;
+}
+
+/* Select element by ID */
+#main-title {
+  font-size: 24px;
+}
+
+/* Select elements by class */
+.card {
+  border: 1px solid #ccc;
+}</h3>
+    </code></pre>
+
+    <!-- Colors and Backgrounds -->
+    <h2>2. Colors & Backgrounds</h2>
+    <p>Use named colors, hex codes, or RGB/HSLA:</p>
+    <pre><code>
+ <h3>body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+div {
+  background: linear-gradient(to right, red, yellow);
+}</h3>
+    </code></pre>
+    <img src="images/css-colors.png" alt="CSS color palette" width="400" />
+
+    <!-- Fonts and Text -->
+    <h2 id="fonts">3. Fonts & Text</h2>
+    <p>Style your text with font families, size, spacing, etc.:</p>
+    <pre><code>
+ h1 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+    </code></pre>
+
+    <!-- Box Model -->
+    <h2 id="box-model">4. Box Model</h2>
+    <p>All HTML elements are boxes. The box model consists of margin, border, padding, and content.</p>
+    <img src="images/css-box-model.png" alt="CSS Box Model" width="500" />
+    <pre><code>
+.card {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+    </code></pre>
+
+    <!-- Layout -->
+    <h2 id="layout">5. Layout: Flexbox & Grid</h2>
+    <p>Modern CSS layout techniques:</p>
+
+    <h3>Flexbox</h3>
+    <pre><code>
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+    </code></pre>
+
+    <h3>Grid</h3>
+    <pre><code>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+    </code></pre>
+
+    <!-- Embedded Video -->
+    <h2>🎬 CSS Crash Course</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI"
+            frameborder="0" allowfullscreen></iframe>
+
+    <!-- Mini Project -->
+    <h2 id="project">🎯 Mini Project: Build a CSS Card</h2>
+    <p>Try building this:</p>
+    <pre><code>
+&lt;div class="card"&gt;
+  &lt;h2&gt;My CSS Card&lt;/h2&gt;
+  &lt;p&gt;This is a styled card component.&lt;/p&gt;
+&lt;/div&gt;
+    </code></pre>
+
+    <pre><code>
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  max-width: 300px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+    </code></pre>
+
+    <p>💡 Save and open in your browser to see the result.</p>
+  </div>
+</body>
+</html>
