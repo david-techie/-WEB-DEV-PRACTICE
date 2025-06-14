@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated CSS Definition</title>
+  <!-- Use a beautiful font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f8ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    blockquote {
+      font-family: 'Lobster', cursive;
+      font-size: 1.6em;
+      color: #333;
+      border-left: 5px solid #007acc;
+      padding-left: 20px;
+      line-height: 1.5;
+      max-width: 800px;
+    }
+    .typing {
+      border-right: 2px solid #007acc;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <blockquote id="animatedText" class="typing"></blockquote>
+  
+  <script>
+    // In-depth definition of CSS
+    const text = "CSS (Cascading Style Sheets) is a powerful stylesheet language used to define the presentation of a web document written in HTML or XML, enabling developers to separate content from visual design. It provides precise control over layout, typography, colors, spacing, and even animations, allowing for responsive and adaptive user interfaces that adjust seamlessly across different devices and screen sizes. CSS employs selectors to target elements, utilizes cascading and inheritance rules to resolve conflicting styles, and harnesses advanced features like flexbox, grid, and media queries to create dynamic, modern designs. This abstraction of visual styling not only enhances user experience but also promotes maintainable and scalable web development practices.";
+    
+    let index = 0;
+    const speed = 40; // typing speed in milliseconds
+    
+    function typeEffect() {
+      if(index < text.length) {
+        document.getElementById("animatedText").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, speed);
+      } else {
+        // Remove typing effect when complete
+        document.getElementById("animatedText").classList.remove("typing");
+      }
+    }
+    
+    // Start the typing effect when the window loads
+    window.onload = typeEffect;
+  </script>
+</body>
+</html>

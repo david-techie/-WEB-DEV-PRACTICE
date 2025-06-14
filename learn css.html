@@ -3,19 +3,209 @@
 <head>
   <meta charset="UTF-8" />
   <title>Learn CSS</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-        body{
-            background: linear-gradient(skyblue, lightgreen, purple);
-        }
-
-        h3{
-          background-color: gold;
-          
-        }
-
-
-
+    /* Base Styles & Background */
+    body {
+      background: linear-gradient(135deg, #E3F2FD, #ffffff);
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Compact, Animated Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 15px;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #F4A460; /* Soft peach tone */
+    }
+    
+    nav a {
+      margin: 0 5px;
+      color: #007acc;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: transform 0.4s cubic-bezier(.68,-0.55,0.27,1.55), background 0.3s ease;
+    }
+    
+    nav a:hover {
+      background: #F4A460;
+      color: white;
+      transform: scale(1.15) rotate(2deg);
+    }
+    
+    /* Animated Heading */
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      background: #B0E0E6;
+      color: white;
+      padding: 20px;
+      margin: 20px auto 30px;
+      width: 80%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: slideDown 1s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Content Container with Fade-in */
+    .container {
+      max-width: 900px;
+      margin: 0 auto 35px auto;
+      background: rgba(255, 255, 255, 0.97);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+    /* Table of Contents Styling */
+    h2 {
+      color: #0056b3;
+      border-bottom: 2px solid #B0E0E6;
+      padding-bottom: 6px;
+      margin-top: 40px;
+      position: relative;
+      animation: slideInLeft 0.8s ease;
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    ul {
+      padding: 20px;
+      list-style: none;
+      margin: 0;
+    }
+    
+    ul li {
+      font-size: 1.1em;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      transition: color 0.25s ease;
+    }
+    
+    ul li a {
+      color: #007acc;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    
+    ul li a:hover {
+      color: #0056b3;
+    }
+    
+    /* Code Blocks with Noticeable Hover Effect */
+    pre code {
+      background: #E3F2FD;
+      color: #333;
+      padding: 12px;
+      display: block;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95em;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow-x: auto;
+    }
+    
+    pre code:hover {
+      transform: scale(1.03);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Buttons & Interactive Links */
+    a.button {
+      background: #F4A460;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    
+    a.button:hover {
+      background: #E68900;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+    }
+    
+    /* Images with Animated Appearance */
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+      animation: imageFade 1s forwards;
+    }
+    
+    @keyframes imageFade {
+      to { opacity: 1; }
+    }
+    
+    /* Footer with Simple Reveal */
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+      animation: slideUp 1s ease;
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
@@ -25,11 +215,13 @@
     <a href="learn html.html">Learn HTML</a>
     <a href="learn css.html">Learn CSS</a>
     <a href="resources.html">Resources</a>
+    <a href="C:\Users\USER-PC\THE CODING CORNER\-WEB-DEV-PRACTICE\About us.html"> About</a>
   </nav>
-
+  
   <div class="container">
     <h1>🎨 Learn CSS</h1>
-    <p>CSS (Cascading Style Sheets) is used to style and lay out web pages — control colors, fonts, spacing, and layouts.</p>
+    <p><blockquote>"<b>CSS- Cascading Style Sheets is a powerful stylesheet language used to define the presentation of a web document written in HTML or XML, enabling developers to separate content from visual design. 
+      It provides precise control over layout, typography, colors, spacing, and even animations, allowing for responsive and adaptive user interfaces that adjust seamlessly across different devices and screen sizes"</b></blockquote></p>
 
     <!-- Table of Contents -->
     <h2>🔗 Topics Covered</h2>
@@ -42,46 +234,53 @@
       <li><a href="#project">Mini Project</a></li>
     </ul>
 
-    <!-- Selectors -->
+    <!-- Selectors Section -->
     <h2 id="selectors">1. CSS Selectors</h2>
-    <p>Selectors target HTML elements to apply styles:</p>
+    <p>CSS selectors allow you to pinpoint and style specific HTML elements, whether you're working with simple 
+  tag selectors, class selectors, or more complex combinations. By mastering selectors, you gain full control 
+  over your webpage's styling ensuring elements look exactly how you want, from subtle adjustments to bold transformations.</p>
     <pre><code>
- <h3>/* Select all paragraphs */
+/* Select all paragraphs */
 p {
   color: blue;
 }
-
 /* Select element by ID */
 #main-title {
   font-size: 24px;
 }
-
 /* Select elements by class */
 .card {
   border: 1px solid #ccc;
-}</h3>
+}
     </code></pre>
-
+    
     <!-- Colors and Backgrounds -->
-    <h2>2. Colors & Backgrounds</h2>
-    <p>Use named colors, hex codes, or RGB/HSLA:</p>
+    <h2 id="colors">2. Colors & Backgrounds</h2>
+    <p>Color sets the mood, creates contrast, and makes designs pop, Whether you're using named colors, 
+      hex codes, or RGB/HSLA values, mastering color application is key to crafting visually stunning and 
+      accessible web designs. Combine gradients, transparency, and strategic color palettes to enhance depth and 
+      style, because the right colors don't just decorate, they communicate. 
+</p>
     <pre><code>
- <h3>body {
+body {
   background-color: #f9f9f9;
   color: #333;
 }
-
 div {
   background: linear-gradient(to right, red, yellow);
-}</h3>
+}
     </code></pre>
-    <img src="images/css-colors.png" alt="CSS color palette" width="400" />
+    <img src="C:\Users\USER-PC\OneDrive\Bilder\Camera Roll\a css color palette .png" alt="CSS color palette" width="400" />
 
     <!-- Fonts and Text -->
     <h2 id="fonts">3. Fonts & Text</h2>
-    <p>Style your text with font families, size, spacing, etc.:</p>
+    <p>Typography or Text is more than just letters, it's how you shape readability, style, and personality in your design.
+       With custom fonts, sizes, and spacing, you can create text that's bold, elegant, or playful, 
+       depending on your vision. Font families define the tone, sizes establish hierarchy, and spacing ensures 
+       balance—all working together to make content engaging and easy to read. 
+</p>
     <pre><code>
- h1 {
+h1 {
   font-family: 'Segoe UI', sans-serif;
   font-size: 32px;
   letter-spacing: 1px;
@@ -91,8 +290,15 @@ div {
 
     <!-- Box Model -->
     <h2 id="box-model">4. Box Model</h2>
-    <p>All HTML elements are boxes. The box model consists of margin, border, padding, and content.</p>
-    <img src="images/css-box-model.png" alt="CSS Box Model" width="500" />
+    <p>The CSS Box Model defines how elements are sized and spaced on a webpage.Every element is treated as a box with four key components:
+      <ol>
+<li>Content: The actual text or image inside the element</li>
+<li>Padding: Space between the content and the border, ensuring breathing room</li>
+<li>Border: The visible or invisible edge that wraps the content</li>
+<li>Margin: Space outside the border, controlling the distance between elements</li>
+</ol>
+</p>
+    <img src="c:\Users\USER-PC\THE CODING CORNER\-WEB-DEV-PRACTICE\CSS.png" alt="CSS Box Model" width="500" />
     <pre><code>
 .card {
   margin: 20px;
@@ -101,9 +307,16 @@ div {
 }
     </code></pre>
 
-    <!-- Layout -->
+    <!-- Layout: Flexbox & Grid -->
     <h2 id="layout">5. Layout: Flexbox & Grid</h2>
-    <p>Modern CSS layout techniques:</p>
+    <p>Flexbox and Grid are powerful CSS layout systems designed to create responsive, dynamic, and 
+      well-structured designs with ease. Flexbox excels at aligning and distributing elements efficiently, 
+      while CSS Grid offers a more structured approach for complex, multi-dimensional layouts. 
+      Together, they enable developers to build adaptive, visually appealing websites that seamlessly 
+      adjust to different screen sizes. 
+</p>
+
+<img src="c:\Users\USER-PC\OneDrive\Bilder\Camera Roll\FLEXBOX AND GRID.png" alt="Image of Flexbox and Grid" width="300" height="350">
 
     <h3>Flexbox</h3>
     <pre><code>
@@ -113,7 +326,6 @@ div {
   align-items: center;
 }
     </code></pre>
-
     <h3>Grid</h3>
     <pre><code>
 .grid-container {
@@ -124,20 +336,19 @@ div {
     </code></pre>
 
     <!-- Embedded Video -->
-    <h2>🎬 CSS Crash Course</h2>
+    <h3>Master Styling Like a Pro! 🎨</h3>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI"
             frameborder="0" allowfullscreen></iframe>
 
     <!-- Mini Project -->
     <h2 id="project">🎯 Mini Project: Build a CSS Card</h2>
-    <p>Try building this:</p>
+    <p>Create your own card component with these instructions:</p>
     <pre><code>
 &lt;div class="card"&gt;
   &lt;h2&gt;My CSS Card&lt;/h2&gt;
   &lt;p&gt;This is a styled card component.&lt;/p&gt;
 &lt;/div&gt;
     </code></pre>
-
     <pre><code>
 .card {
   border: 1px solid #ddd;
@@ -146,10 +357,16 @@ div {
   background-color: #fff;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   font-family: Arial, sans-serif;
+  border-radius: 8px;
 }
     </code></pre>
-
-    <p>💡 Save and open in your browser to see the result.</p>
+    <p>💡 Save and open in your browser to see your creation in action.</p>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Learn CSS. All rights reserved.</p>
+  </footer>
 </body>
+</html>
 </html>

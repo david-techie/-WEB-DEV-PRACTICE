@@ -1,9 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Resources</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+  /* 🌤️ Elegant Background */
+  body {
+    background: linear-gradient(to right, #E3F2FD, #ffffff);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+  }
+
+  /* ✨ Smooth Fade-in Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* 🔗 Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 14px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid #F4A460;
+    transition: box-shadow 0.5s ease-in-out;
+  }
+
+  nav:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  nav a {
+    color: #007acc;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a:hover {
+    background: #F4A460;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.08);
+  }
+
+  /* 📚 Content Container */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: popUp 1.5s ease-in-out forwards;
+  }
+
+  /* ✨ Pop-up Animation */
+  @keyframes popUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  /* 🔹 Section Headings */
+  h2 {
+    margin-top: 25px;
+    padding: 14px;
+    background: #F4A460;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.6em;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-in-out;
+  }
+
+  h2:hover {
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+  }
+
+  /* 📜 Resource Links */
+  ul {
+    padding: 10px;
+    list-style-type: none;
+  }
+
+  ul li {
+    margin-bottom: 12px;
+  }
+
+  ul li a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+
+  ul li a:hover {
+    color: #F4A460;
+    text-decoration: underline;
+    transform: scale(1.05);
+  }
+
+  /* 🎬 Embedded Video Styling */
+  iframe {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.5s ease-in-out;
+  }
+
+  iframe:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  }
+</style>
 </head>
 <body>
     <nav>
@@ -11,17 +128,21 @@
         <a href="learn html.html">Learn HTML</a>
         <a href="learn css.html">Learn CSS</a>
         <a href="resources.html">Resources</a>
+        <a href="C:\Users\USER-PC\THE CODING CORNER\-WEB-DEV-PRACTICE\About us.html"> About</a>
     </nav>
 
     <div class="container">
         <h1>🛠️ Resources for Learning HTML & CSS</h1>
+        <blockquote><i><strong> CSS, HTML, and web development can feel like staring at a mountain of tags, styles, and code overwhelming at first, but trust me, the climb is worth it! Every expert developer started as a beginner, confused by divs and wondering why their layout looks like a broken puzzle. 
+          Every mistake teaches you something new, and with patience, you'll realize that what once seemed confusing now feels natural. Never stop experimenting, stay curious, ask questions, and laugh at the errors
+Keep pushing forward, and remember: every developer was once where you are now. 🚀🔥
+</strong></i></blockquote>
 
         <!-- Section: HTML Resources -->
         <h2>📘 HTML Resources</h2>
         <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Guide</a></li>
             <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
-            <li><a href="https://htmlcheatsheet.com/" target="_blank">HTML Cheat Sheet</a></li>
         </ul>
 
         <!-- Section: CSS Resources -->
@@ -30,7 +151,6 @@
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Reference</a></li>
             <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a></li>
             <li><a href="https://css-tricks.com/snippets/css/" target="_blank">CSS Tricks Snippets</a></li>
-            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap Framework</a></li>
         </ul>
 
         <!-- Section: Tools & Editors -->
@@ -45,24 +165,36 @@
         <!-- Section: Cheat Sheets -->
         <h2>📄 Cheat Sheets</h2>
         <ul>
-            <li><a href="https://web.stanford.edu/class/cs142/cheat-sheets/HTML-Cheat-Sheet.pdf" target="_blank">HTML Cheat Sheet (PDF)</a></li>
-            <li><a href="https://web.stanford.edu/class/cs142/cheat-sheets/CSS-Cheat-Sheet.pdf" target="_blank">CSS Cheat Sheet (PDF)</a></li>
+            <li><a href="C:\Users\USER-PC\THE CODING CORNER\-WEB-DEV-PRACTICE\CSS cheat file.html" target="_blank">CSS Cheat Sheet</a></li>
+            <li><a href="C:\Users\USER-PC\THE CODING CORNER\-WEB-DEV-PRACTICE\HTML Cheat file.html" target="_blank"> HTML cheat sheet</a></li>
         </ul>
 
         <!-- Section: YouTube Channels -->
-        <h2>📺 YouTube Channels to Learn</h2>
-        <ul>
-            <li><a href="https://www.youtube.com/c/Freecodecamp" target="_blank">freeCodeCamp</a></li>
-            <li><a href="https://www.youtube.com/c/TheNetNinja" target="_blank">The Net Ninja</a></li>
-            <li><a href="https://www.youtube.com/c/TraversyMedia" target="_blank">Traversy Media</a></li>
-            <li><a href="https://www.youtube.com/c/ProgrammingwithMosh" target="_blank">Programming with Mosh</a></li>
-        </ul>
+        <h2>📺 YouTube Channels You can Learn From</h2>
+<div class="video-grid">
+  <iframe src="https://www.youtube.com/embed/HGTJBPNC-Gw" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/pQN-pnXPaVg" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/BzYMFd-lQL4" allowfullscreen></iframe>
+</div>
 
-        <!-- Section: Embedded Playlist -->
-        <h2>🎬 HTML & CSS Tutorial Playlist</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V"
-                frameborder="0" allowfullscreen></iframe>
+<style>
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    gap: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
 
+  iframe {
+    width: 100%;
+    aspect-ratio: 1; /* Ensures square shape */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+</style>
     </div>
 </body>
 </html>

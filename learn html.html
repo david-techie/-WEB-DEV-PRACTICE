@@ -4,48 +4,193 @@
     <meta charset="UTF-8">
     <title>Learn HTML</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 🌤️ Soft Blue & White Theme */
+        body {
+            background: linear-gradient(to right, #E3F2FD, #ffffff);
+            color: #333;
+            font-family: 'Courier New', monospace;;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 🔗 Compact Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: #ffffff;
+            padding: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid #F4A460; /* Soft peach tone */
+        }
+
+        nav a {
+            color: #007acc;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background: #F4A460;
+            color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 📘 Learn HTML Heading */
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: white;
+            background: #B0E0E6; /* Baby blue */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* 📚 Content Container */
+        .container {
+            max-width: 900px;
+            margin: 35px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 🔹 Structured Sections */
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 6px solid #F4A460;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 🏗️ Code Blocks */
+        pre code {
+            background: #E3F2FD;
+            color: #333;
+            padding: 14px;
+            display: block;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 🎨 Buttons & Links */
+        a {
+            background: #F4A460;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background: #E68900;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+    <!-- 🔗 Navigation -->
     <nav>
         <a href="home.html">Home</a>
         <a href="learn html.html">Learn HTML</a>
         <a href="learn css.html">Learn CSS</a>
         <a href="resources.html">Resources</a>
+        <a href="C:\Users\USER-PC\THE CODING CORNER\-WEB-DEV-PRACTICE\About us.html"> About</a>
     </nav>
 
+    <!-- 📘 Main Content -->
     <div class="container">
         <h1>📘 Learn HTML</h1>
-        <p>HTML (HyperText Markup Language) is the backbone of all websites. It defines the structure and content of web pages.</p>
+        <p>HTML (HyperText Markup Language) defines the structure and content of web pages.</p>
 
-        <!-- Section: Basic Structure -->
-        <h2>1. Basic HTML Page Structure</h2>
-        <img src="images/html-structure.png" alt="HTML Page Structure" width="600">
-        <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
+        <!-- ✨ Basic Structure -->
+        <section>
+            <h2>1. Basic HTML Page Structure</h2>
+            <img src="C:\Users\USER-PC\OneDrive\Bilder\Camera Roll\HTML STRUCTURE IMAGE.png" alt="HTML Page Structure" width="300">
+           <!-- Short Lesson on HTML Structure -->
+<section>
+    <h2>📖 Understanding HTML Structure</h2>
+    <p>
+        HTML (HyperText Markup Language) forms the foundation of web pages. It consists of elements
+        that define content, structure, and formatting.
+    </p>
+    <p>Every HTML page follows a standard structure:</p>
+    <pre><code>
+&lt;!DOCTYPE html&gt;  &lt;!-- Declares the document type --&gt;
+&lt;html&gt;           &lt;!-- Root element of the page --&gt;
+  &lt;head&gt;        &lt;!-- Metadata & page title --&gt;
     &lt;title&gt;My First Page&lt;/title&gt;
   &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello, world!&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;body&gt;        &lt;!-- Visible content --&gt;
+    &lt;h1&gt;Welcome to HTML!&lt;/h1&gt;
+    &lt;p&gt;HTML structures your webpage.&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-        </code></pre>
+    </code></pre>
+    <p>
+      <ul>  
+      <strong>Key Elements Explained:</strong> 
+       <li>&lt;html&gt;- is the root element, wrapping everything</li>  
+      <li>&lt;head&gt;- contains metadata, title, and links to styles</li>  
+      <li>&lt;body&gt;- holds the visible content displayed in browsers</li>  
+      <li>&lt;h1&gt; to &lt;h6&gt;-define headings for structure</li>
+      <li>&lt;p&gt;- creates paragraphs for readable text</li>
+          </ul> 
+    </p>
+    <p>
+        Understanding this structure ensures proper rendering, SEO optimization, and page accessibility.
+    </p>
+</section>
 
-        <!-- Section: Headings and Paragraphs -->
-        <h2>2. Headings & Paragraphs</h2>
-        <p>HTML provides 6 levels of headings, from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code>.</p>
-        <pre><code>
-&lt;h1&gt;Main Heading&lt;/h1&gt;
-&lt;h2&gt;Subheading&lt;/h2&gt;
-&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
-        </code></pre>
+        <!-- 🏗️ Headings & Paragraphs -->
+        <section>
+            <h2>2. Headings & Paragraphs</h2>
+            <p>Headings are one of the most fundamental elements in web development. 
+                Every well-structured webpage relies on headings to guide the user through information efficiently.</p>
+                <p><strong>Heading serve as:</strong>
+                <ul>
+                    <li>Visual Hierarchy: They create a clear structure, making the page easy to scan</li>
+                    <li>SEO Optimization: Search engines use headings to understand the page's topic</li>
+                    <li>Accessibility: Screen readers rely on headings to help visually impaired users navigate a website</li>
+                </ul>
+                There are a total of six (6) headings, h1-h6. Each heading has a key role it plays in the website structure.
+                </p>
+                <h2>Paragraphs</h2>
+                The &lt;P&gt; tag in HTML defines a paragraph, which is a fundamental block-level element used to organize and display text content on a webpage. It creates distinct sections of text, separating ideas logically and enhancing readability.
 
-        <!-- Section: Lists -->
-        <h2>3. Lists</h2>
-        <p>You can create ordered or unordered lists:</p>
-        <pre><code>
+            <pre><code>
+                <ul>
+<li>&lt;h1&gt;: This is the Main Heading</li>
+<li>&lt;h2&gt;: Subheading</li>
+<li>&lt;h3&gt;: Subsection heading</li>
+<li>&lt;h4&gt;: Detailed topic heading</li>
+<li>&lt;h5&gt;: Sub-detailed heading</li>
+<li>&lt;h6&gt;: Least Important heading</li>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+              </ul>
+            </code></pre>
+        </section>
+
+        <!-- 📜 Lists -->
+        <section>
+            <h2>3. Lists</h2>
+            Lists in HTML: Lists are essential for organizing information, making it more structured and easy to read. They allow content to be presented in a clear, sequential or unordered format, ensuring readability and logical flow.<br> There are various types of lists,
+            but we will be focusing on two: Ordered and Unordered Lists. <br> <br>
+         1️⃣ Ordered Lists &lt;ol&gt;: An ordered list is used when items need a specific order. They are often numbered or lettered, making them suitable for step-by-step instructions, rankings, or sequences. <br><br>
+         2️⃣ Unordered Lists &lt;ul&gt;: These lists do not follow a specific sequence. They are commonly used for presenting items that do not need numbering, such as navigation menus, features, or bullet points in articles.
+
+            <p>Sample:</p>
+            <pre><code>
 &lt;ul&gt;
   &lt;li&gt;Item One&lt;/li&gt;
   &lt;li&gt;Item Two&lt;/li&gt;
@@ -55,76 +200,69 @@
   &lt;li&gt;First&lt;/li&gt;
   &lt;li&gt;Second&lt;/li&gt;
 &lt;/ol&gt;
-        </code></pre>
+            </code></pre>
+        </section>
 
-        <!-- Section: Links -->
-        <h2>4. Links</h2>
-        <p>Links use the <code>&lt;a&gt;</code> tag with an <code>href</code> attribute:</p>
-        <pre><code>
+        <!-- 🔗 Links -->
+        <section>
+            <h2>4. Links</h2>
+            Links, created using the &lt;a&gt; tag, allow users to navigate between web pages, external sites, and 
+            resources. They are the backbone of web navigation, making content accessible across different locations.
+
+            <pre><code>
 &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
-        </code></pre>
+            </code></pre>
+        </section>
 
-        <!-- Section: Images -->
-        <h2>5. Images</h2>
-        <pre><code>
+        <!-- 🖼️ Images -->
+        <section>
+            <h2>5. Images</h2>
+            Images are defined by the &lt;img&gt; tag, visually enhance web content and provide meaningful illustrations that engage users.<br>
+
+         <img src="c:\Users\USER-PC\OneDrive\Bilder\Camera Roll\CUTE GIRL.png" alt="Image of a cute girl" width="310" >
+            <pre><code>
 &lt;img src="images/example.jpg" alt="Example image" width="400"&gt;
-        </code></pre>
+            </code></pre>
+        </section>
 
-        <!-- Section: Tables -->
-        <h2>6. Tables</h2>
-        <pre><code>
+        <!-- 📊 Tables -->
+        <section>
+            <h2>6. Tables</h2>
+            Tables in HTML provide a structured format for displaying information in a clear, easy-to-read way. 
+            By organizing data into rows and columns, tables make it simple to compare values, showcase statistics, 
+            and present structured content effectively. 
+<br>
+            <img src="c:\Users\USER-PC\OneDrive\Bilder\Camera Roll\HTML TABLE.png" alt="Image of a html table" width="300" >
+            <pre><code>
 &lt;table&gt;
   &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;Bob&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
-        </code></pre>
+            </code></pre>
+        </section>
 
-        <!-- Section: Forms -->
-        <h2>7. Forms</h2>
-        <pre><code>
+        <!-- 📝 Forms -->
+        <section>
+            <h2>7. Forms</h2>
+            Forms in HTML allow users to input and submit data to a website. They are essential for registration pages, contact forms, login authentication, surveys, and more.<br>
+        <Img src="c:\Users\USER-PC\OneDrive\Bilder\Camera Roll\HTML FORMS.png" alt="Image of forms" width="315" >
+            <pre><code>
 &lt;form action="/submit" method="post"&gt;
   &lt;label&gt;Name: &lt;input type="text" name="name"&gt;&lt;/label&gt;&lt;br&gt;
   &lt;input type="submit" value="Submit"&gt;
 &lt;/form&gt;
-        </code></pre>
+            </code></pre>
+        </section>
 
-        <!-- Section: Embedded Video -->
-        <h2>🎬 Watch: HTML in 10 Minutes</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE"
-                frameborder="0" allowfullscreen></iframe>
-
-        <!-- Section: Mini Project -->
-        <h2>🎯 Mini Project: My First Web Page</h2>
-        <p>Create a simple HTML file that includes:</p>
-        <ul>
-            <li>A title</li>
-            <li>Headings</li>
-            <li>Paragraphs</li>
-            <li>An image</li>
-            <li>A list</li>
-            <li>A link</li>
-        </ul>
-        <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;About Me&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;My Name&lt;/h1&gt;
-  &lt;img src="images/me.jpg" alt="My Photo" width="200"&gt;
-  &lt;p&gt;Hi! I’m learning HTML.&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;I love coding&lt;/li&gt;
-    &lt;li&gt;I enjoy music&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;a href="https://www.example.com"&gt;Visit my site&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-        </code></pre>
-
-        <p>✅ Try saving the above as <code>my-first-page.html</code> and opening it in a browser.</p>
+        <!-- 🎬 Video Lesson -->
+        <section>
+            <h3>🎬 Hey, Techie🚀 There's still so much to uncover, and the adventure is just getting started🌟 Dive into the video below to unlock more secrets, 
+                You don't want to miss it!</h3>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE"
+                    frameborder="0" allowfullscreen></iframe>
+        </section>
     </div>
 </body>
 </html>

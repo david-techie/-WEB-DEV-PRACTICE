@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Quiz with Timer</title>
+  <style>
+    /* Base styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fce4ec, #e8daef);
+      color: #4a148c;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    h1, h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    /* Timer styling */
+    #timer {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #d80b34;
+    }
+    
+    /* Question box styling */
+    .question {
+      background: #ffffff;
+      border: 2px solid #910fe1;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+    }
+    .question:hover {
+      transform: scale(1.02);
+    }
+    .question h4 {
+      margin-bottom: 12px;
+    }
+    
+    /* Feedback styling */
+    .incorrect {
+      background-color: #ffe6e6;
+      border-left: 5px solid #e53935;
+    }
+    .correct {
+      background-color: #e6ffe6;
+      border-left: 5px solid #43a047;
+    }
+    
+    /* Form and button styling */
+    form {
+      margin: 0 auto;
+    }
+    button {
+      display: block;
+      background-color: #910fe1;
+      color: #ffffff;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 20px auto;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #7a0dc7;
+      transform: translateY(-2px);
+    }
+    
+    /* Result styling */
+    .result {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FUN QUIZ</h1>
+  <div id="timer">Time left: 2:00</div>
+  
+  <h3>HTML QUIZ</h3>
+  <form id="quizForm">
+    <div class="question" id="q1">
+      <h4>1. What does HTML stand for?</h4>
+      <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label><br>
+      <label><input type="radio" name="q1" value="b"> Hyperlinks and Text Markup Language</label><br>
+      <label><input type="radio" name="q1" value="c"> Home Tool Markup Language</label><br>
+      <label><input type="radio" name="q1" value="d"> Hyper Text Markdown Language</label>
+    </div>
+
+    <div class="question" id="q2">
+      <h4>2. All these are importance of HTML <b>except</b></h4>
+      <label><input type="radio" name="q2" value="a"> Game development</label><br>
+      <label><input type="radio" name="q2" value="b"> Internet navigation</label><br>
+      <label><input type="radio" name="q2" value="c"> Responsive designs</label><br>
+      <label><input type="radio" name="q2" value="d"> Website accessibility</label>
+    </div>
+
+    <div class="question" id="q3">
+      <h4>3. What tag is used to create a hyperlink?</h4>
+      <label><input type="radio" name="q3" value="a"> &lt;a&gt;</label><br>
+      <label><input type="radio" name="q3" value="b"> &lt;href&gt;</label><br>
+      <label><input type="radio" name="q3" value="c"> &lt;link&gt;</label><br>
+      <label><input type="radio" name="q3" value="d"> &lt;hyperlink&gt;</label>
+    </div>
+
+    <div class="question" id="q4">
+      <h4>4. Which tag inserts a line break?</h4>
+      <label><input type="radio" name="q4" value="a"> &lt;break&gt;</label><br>
+      <label><input type="radio" name="q4" value="b"> &lt;br&gt;</label><br>
+      <label><input type="radio" name="q4" value="c"> &lt;lb&gt;</label><br>
+      <label><input type="radio" name="q4" value="d"> &lt;line&gt;</label>
+    </div>
+
+    <div class="question" id="q5">
+      <h4>5. Which tag is used to define a table row?</h4>
+      <label><input type="radio" name="q5" value="a"> &lt;td&gt;</label><br>
+      <label><input type="radio" name="q5" value="b"> &lt;th&gt;</label><br>
+      <label><input type="radio" name="q5" value="c"> &lt;tr&gt;</label><br>
+      <label><input type="radio" name="q5" value="d"> &lt;table&gt;</label>
+    </div>
+    
+    <h3>CSS QUIZ</h3>
+    <div class="question" id="q6">
+      <h4>6. Which tag makes text bold?</h4>
+      <label><input type="radio" name="q6" value="a"> &lt;b&gt;</label><br>
+      <label><input type="radio" name="q6" value="b"> &lt;strong&gt;</label><br>
+      <label><input type="radio" name="q6" value="c"> &lt;bold&gt;</label><br>
+      <label><input type="radio" name="q6" value="d"> &lt;em&gt;</label>
+    </div>
+
+    <div class="question" id="q7">
+      <h4>7. What is the correct HTML element for inserting a line break?</h4>
+      <label><input type="radio" name="q7" value="a"> &lt;break&gt;</label><br>
+      <label><input type="radio" name="q7" value="b"> &lt;br&gt;</label><br>
+      <label><input type="radio" name="q7" value="c"> &lt;lb&gt;</label><br>
+      <label><input type="radio" name="q7" value="d"> &lt;line&gt;</label>
+    </div>
+
+    <div class="question" id="q8">
+      <h4>8. What does &lt;ul&gt; stand for?</h4>
+      <label><input type="radio" name="q8" value="a"> Unmarked List</label><br>
+      <label><input type="radio" name="q8" value="b"> Unordered List</label><br>
+      <label><input type="radio" name="q8" value="c"> Underlined List</label><br>
+      <label><input type="radio" name="q8" value="d"> Universal List</label>
+    </div>
+
+    <div class="question" id="q9">
+      <h4>9. Which tag defines a list item?</h4>
+      <label><input type="radio" name="q9" value="a"> &lt;li&gt;</label><br>
+      <label><input type="radio" name="q9" value="b"> &lt;ul&gt;</label><br>
+      <label><input type="radio" name="q9" value="c"> &lt;ol&gt;</label><br>
+      <label><input type="radio" name="q9" value="d"> &lt;list&gt;</label>
+    </div>
+
+    <div class="question" id="q10">
+      <h4>10. What is the correct tag for inserting a background color?</h4>
+      <label><input type="radio" name="q10" value="a"> &lt;background&gt;</label><br>
+      <label><input type="radio" name="q10" value="b"> use CSS style="background-color"</label><br>
+      <label><input type="radio" name="q10" value="c"> &lt;bgcolor&gt;</label><br>
+      <label><input type="radio" name="q10" value="d"> &lt;color&gt;</label>
+    </div>
+    
+    <button type="button" onclick="checkAnswers()">Submit</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    const correctAnswers = {
+      q1: 'a', q2: 'c', q3: 'a', q4: 'b', q5: 'c',
+      q6: 'a', q7: 'b', q8: 'b', q9: 'a', q10: 'b',
+      q11: 'a', q12: 'b', q13: 'a', q14: 'b', q15: 'c'
+    };
+
+    function checkAnswers() {
+      let score = 0;
+      const total = Object.keys(correctAnswers).length;
+      const form = document.getElementById('quizForm');
+
+      for (let q in correctAnswers) {
+        const questionDiv = document.getElementById(q);
+        questionDiv.classList.remove('correct', 'incorrect');
+        const selected = form.elements[q].value;
+        if (selected === correctAnswers[q]) {
+          questionDiv.classList.add('correct');
+          score++;
+        } else {
+          questionDiv.classList.add('incorrect');
+        }
+      }
+      document.getElementById('result').textContent =
+        `You got ${score} out of ${total} correct.`;
+    }
+
+    // Timer
+    let time = 120; // 2 minutes in seconds
+    const timerDisplay = document.getElementById('timer');
+    function updateTimer() {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0'+seconds : seconds}`;
+      if (time > 0) {
+        time--;
+      } else {
+        clearInterval(timerInterval);
+        alert("Time's up! Submitting quiz.");
+        checkAnswers();
+      }
+    }
+    const timerInterval = setInterval(updateTimer, 1000);
+  </script>
+
+</body>
+</html>
